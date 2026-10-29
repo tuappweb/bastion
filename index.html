@@ -94,6 +94,8 @@
     }
     @keyframes girar { to { transform: rotate(360deg); } }
     @media (prefers-reduced-motion: reduce) { #inicio .girando { animation-duration: 2.4s; } #inicio { transition: none; } }
+    /* Samsung Internet respeta el diseño oscuro propio solo si la página responde a prefers-color-scheme */
+    @media (prefers-color-scheme: dark) { :root { color-scheme: dark; } html, body, #contenedorIframe { background: var(--fondo); } }
   </style>
 </head>
 <body>
